@@ -1,0 +1,20 @@
+<h1>Welcome <%= current_user.first_name %></h1>
+<p>
+  My name is
+  <%= current_user.name %>
+</p>
+<p>
+  Total Score:<br>
+  <%= current_user.total_score %><br>
+
+  Today Score:<br>
+  <%= current_user.daily_score %><br>
+
+  Last 7 Days:<br>
+  <%= current_user.past_seven_days %><br>
+</p>
+<p>
+  <% current_user.goals.each do |goal| %>
+    <%= goal.description%><br>
+  <% end %>
+</p>

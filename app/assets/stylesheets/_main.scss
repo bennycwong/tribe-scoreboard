@@ -1,0 +1,9 @@
+div.main {
+  padding: 24px;
+  @include flex(4);
+  @include media($medium-screen-up) {
+    @include flex(3);
+    background-color: $base-background-color;
+    height: 100vh;
+  }
+}

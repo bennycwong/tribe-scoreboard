@@ -1,0 +1,40 @@
+nav.sidenav {
+  color: white;
+  display: none;
+  @include flex(0);
+  @include media($medium-screen-up) {
+    @include flex(1);
+    @include display(flex);
+    @include flex-direction(column);
+    @include justify-content(space-between);
+    min-width: 280px;
+    max-width: 280px;
+    float: left;
+    background-color: $third-background-color;
+    height: 100vh;
+    text-align: center;
+  }
+
+  header {
+    height: 80px;
+    background-color: $yellow;
+    padding: 24px;
+    font-size: 24px;
+  }
+  ol{
+    @include flex(1);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      font-size: 20px;
+      text-transform: uppercase;
+      padding: 20px;
+      font-weight: 600;
+    }
+  }
+  footer {
+    bottom: 0;
+  }
+}

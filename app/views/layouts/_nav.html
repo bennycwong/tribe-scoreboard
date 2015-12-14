@@ -1,0 +1,24 @@
+<header>
+  <h1 class="logo">
+    <span class="logotype">Tribe Scoreboard</span>
+  </h1>
+</header>
+
+<ol class="forms" data-role="forms">
+  <li><%= link_to 'Dashboard', dashboard_path %></li>
+  <li>Friends</li>
+  <li>Groups</li>
+  <li>Profile</li>
+
+</ol>
+
+<footer>
+  <% if signed_in? %>
+    Signed in as:<br><%= current_user.email %>
+    <br>
+
+    <%= link_to 'Sign out', sign_out_path, method: :delete %>
+  <% else %>
+    <%= link_to 'Sign in', sign_in_path %>
+  <% end %>
+</footer>
