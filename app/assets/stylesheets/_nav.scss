@@ -1,18 +1,20 @@
 nav.sidenav {
   color: white;
-  display: none;
+  margin-left: -280px;
+  background-color: $third-background-color;
+  min-width: $nav-width;
+  max-width: $nav-width;
+  height: 100vh;
+  text-align: center;
+  position:fixed;
   @include flex(0);
   @include media($medium-screen-up) {
-    @include flex(1);
+    margin-left: 0px;
+
     @include display(flex);
+    @include flex(1);
     @include flex-direction(column);
     @include justify-content(space-between);
-    min-width: 280px;
-    max-width: 280px;
-    float: left;
-    background-color: $third-background-color;
-    height: 100vh;
-    text-align: center;
   }
 
   header {
