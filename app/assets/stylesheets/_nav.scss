@@ -18,8 +18,9 @@ nav.sidenav {
   header {
     height: 80px;
     background-color: $yellow;
-    padding: 24px;
+    padding: 20px;
     font-size: 24px;
+    font-weight: 800;
   }
   ol{
     @include flex(1);
@@ -32,9 +33,14 @@ nav.sidenav {
       text-transform: uppercase;
       padding: 20px;
       font-weight: 600;
+
+      &.coming-soon {
+        color: $light-gray;
+      }
     }
   }
   footer {
     bottom: 0;
+    padding: 12px;
   }
 }

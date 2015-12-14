@@ -18,7 +18,7 @@ class User < ActiveRecord::Base
   def past_seven_days
     sum_up_points scores.past_seven_days
   end
-  
+
 private
   def sum_up_points scores
     points = 0

@@ -1,0 +1,16 @@
+.dashboard {
+  .scoreboard {
+    @include display(flex);
+    @include flex-direction(row);
+    @include justify-content(space-around);
+    /*background-color: $third-background-color;*/
+    text-align: center;
+    .score {
+
+      .points {
+      }
+    }
+
+  }
+
+}

@@ -1,20 +1,22 @@
-<h1>Welcome <%= current_user.first_name %></h1>
-<p>
-  My name is
-  <%= current_user.name %>
-</p>
-<p>
-  Total Score:<br>
-  <%= current_user.total_score %><br>
+<h2>Welcome <%= current_user.first_name %>,</h2>
 
-  Today Score:<br>
-  <%= current_user.daily_score %><br>
+<div class ="scoreboard">
+  
+  <div class="score">
+    <h4>Today's Score</h4>
+    <h1 class="points"><%= current_user.daily_score %></h1>
+  </div>
 
-  Last 7 Days:<br>
-  <%= current_user.past_seven_days %><br>
-</p>
-<p>
-  <% current_user.goals.each do |goal| %>
-    <%= goal.description%><br>
-  <% end %>
-</p>
+  <div class="score">
+    <h4>Last 7 Days</h4>
+    <h1 class="points"><%= current_user.past_seven_days %></h1>
+  </div>
+
+  <div class="score">
+    <h4>Total Score</h4>
+    <h1 class="points"><%= current_user.total_score %></h1>
+  </div>
+
+</div>
+
+<%=render 'goals'%>
