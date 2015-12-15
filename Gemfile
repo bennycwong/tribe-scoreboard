@@ -23,7 +23,9 @@ gem "simple_form"
 gem "title"
 gem "uglifier"
 gem "clearance"
-gem "rails_admin"
+
+gem "administrate"
+# gem "rails_admin"
 
 group :development do
   gem "quiet_assets"
